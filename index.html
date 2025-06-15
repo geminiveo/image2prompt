@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Image to Prompt</title>
+</head>
+<body>
+  <h2>Image to Prompt</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if result %}
+    <h3>Prompt Output:</h3>
+    <pre>{{ result }}</pre>
+  {% endif %}
+</body>
+</html>
